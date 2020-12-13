@@ -1,0 +1,17 @@
+﻿@model RunPerfomancesWebApp.Models.RunPerfomances
+
+@{
+    ViewBag.Title = "GetPace";
+}
+    <div>
+        <h3 style="text-align:center; font-weight:bold">Count your running perfomances</h3>
+        @using (Html.BeginForm("CountPace", "Home"))
+        {
+            @Html.LabelFor(m => m.Speed, "Enter speed (km/hour):")
+            <br />
+            @Html.TextBoxFor(m => m.Speed)
+            @Html.ValidationMessageFor(m => m.Speed)
+            <br /> <br />
+            <p><input type="submit" value="Count" /></p>
+        }
+    </div>

@@ -1,0 +1,31 @@
+﻿@model RunPerfomancesWebApp.Models.RunPerfomances
+
+@{
+    ViewBag.Title = "CountPaceAndSpeed";
+}
+    <div>
+        <h3></h3>
+        @using (Html.BeginForm())
+        {
+            @Html.LabelFor(m => m.Time, "Time:")
+            <br />
+            @Html.TextBoxFor(m => m.Time) @:hour
+            <br />
+            @Html.LabelFor(m => m.Distance, "Distance:")
+            <br />
+            @Html.TextBoxFor(m => m.Distance) @:km/hour
+            <br />
+            @Html.LabelFor(m => m.Pace, "Your pace:")
+            <br />
+            @Html.TextBoxFor(m => m.Pace) @:min/km
+            <br />
+            @Html.LabelFor(m => m.Speed, "Your speed:")
+            <br />
+            @Html.TextBoxFor(m => m.Speed) @:km
+            <br /><br />
+            <p>
+                <input type="button" onclick="window.location.href='/Home/GetPaceAndSpeed';"
+                       value="Try again" />
+            </p>
+        }
+    </div>
