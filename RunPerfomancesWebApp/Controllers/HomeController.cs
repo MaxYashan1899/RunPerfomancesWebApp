@@ -21,11 +21,8 @@ namespace RunPerfomancesWebApp.Controllers
                 return View("~/Views/Home/CountPaceAndTime.cshtml", perfomances);
             }
             else
-            {
-                return View("~/Views/Home/GetPaceAndTime.cshtml", perfomances);
-            }
-       
-         }
+                 return View("~/Views/Home/GetPaceAndTime.cshtml", perfomances);
+        }
        
         public ActionResult GetSpeedAndDistance()
         {
